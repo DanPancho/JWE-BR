@@ -1,0 +1,69 @@
+info:
+  version: 1.0.0
+  date: 2024-08-27
+  stage: development
+  autor: Daniel Arcos
+  email: darcos@banred.fin.ec
+  description: JWE BR
+ 
+server:
+  port: ${SERVER_PORT:8443}
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+  error:
+    include-message: never
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+  address: 0.0.0.0
+  undertow:
+    threads:
+      io: 10
+      worker: 256
+    allow-encoded-slash: false
+    always-set-keep-alive: true
+    decode-url: true
+    eager-filter-init: true
+    max-cookies: 200
+    max-headers: 200
+    max-http-post-size: 10MB
+    preserve-path-on-forward: false
+    url-charset: UTF-8
+ 
+spring:
+  main:
+    log-startup-info: true
+    banner-mode: console
+  thymeleaf:
+    enabled: false
+  jackson:
+    default-property-inclusion: non-null
+    serialization:
+      write-date-keys-as-timestamps: false
+    time-zone: GMT-5
+    date-format: yyyy-MM-dd HH:mm:ss
+ 
+logging:
+  logback:
+    rollingpolicy:
+      clean-history-on-start: true
+  level:
+    '[org.springframework]': ERROR
+    '[com.banred]': DEBUG
+  file:
+    path: /home/uppuser/micro-test-unit/JWE/logs
+ 
+microservice:
+  default:
+    issuerResponseCode: 91
+    outboundAppliedTrimtext: false
+    inboundAppliedTrimtext: false
+  parameters:
+    KEY_PATH: ${KEY_PATH}
+    KEY_PASS: ${KEY_PASS}
+    KEY_ALIAS: ${KEY_ALIAS}
+    KEY_PRIVATE: ${KEY_PRIVATE}
+  enableTEMPIN: ${SHOW_LOGS:true}
+  protocol: REST
