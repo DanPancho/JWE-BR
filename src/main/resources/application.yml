@@ -61,9 +61,8 @@ microservice:
     outboundAppliedTrimtext: false
     inboundAppliedTrimtext: false
   parameters:
-    KEY_PATH: ${KEY_PATH}
-    KEY_PASS: ${KEY_PASS}
-    KEY_ALIAS: ${KEY_ALIAS}
-    KEY_PRIVATE: ${KEY_PRIVATE}
-  enableTEMPIN: ${SHOW_LOGS:true}
+    KEY_SIZE: ${KEY_SIZE:32}
+    PUBLIC_KEY_PATH_FILE: ${PUBLIC_KEY_PATH_FILE:/home/publickey}
+    ENCRYPT_SECRET: ${ENCRYPT_SECRET:true}
+  enableTEMPIN: ${SHOW_LOGS:false}
   protocol: REST
