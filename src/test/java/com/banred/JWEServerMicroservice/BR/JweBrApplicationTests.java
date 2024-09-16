@@ -1,4 +1,4 @@
-package com.example.JWE.BR;
+package com.banred.JWEServerMicroservice.BR;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

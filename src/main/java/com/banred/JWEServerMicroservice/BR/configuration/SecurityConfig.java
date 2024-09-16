@@ -1,4 +1,4 @@
-package com.example.JWE.BR.configuration;
+package com.banred.JWEServerMicroservice.BR.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

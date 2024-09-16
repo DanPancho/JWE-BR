@@ -1,4 +1,4 @@
-package com.example.JWE.BR.data;
+package com.banred.JWEServerMicroservice.BR.data;
 
 import lombok.Setter;
 

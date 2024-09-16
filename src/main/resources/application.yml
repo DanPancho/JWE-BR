@@ -56,13 +56,8 @@ logging:
     path: /home/uppuser/micro-test-unit/JWE/logs
  
 microservice:
-  default:
-    issuerResponseCode: 91
-    outboundAppliedTrimtext: false
-    inboundAppliedTrimtext: false
   parameters:
-    KEY_SIZE: ${KEY_SIZE:32}
-    PUBLIC_KEY_PATH_FILE: ${PUBLIC_KEY_PATH_FILE:/home/publickey}
-    ENCRYPT_SECRET: ${ENCRYPT_SECRET:true}
-  enableTEMPIN: ${SHOW_LOGS:false}
-  protocol: REST
+    JWE_ENCRIPTION_KEY_SIZE: ${JWE_ENCRIPTION_KEY_SIZE:32}
+    SECRET_KEY_CERT_PATH: ${SECRET_KEY_CERT_PATH:/home/publickey}
+    PRIVATE_KEY_CERT_PATH: ${PRIVATE_KEY_CERT_PATH:/home/publickey}
+    SECRET_KEY_ENABLE_ENCRIPTION: ${SECRET_KEY_ENABLE_ENCRIPTION:true}
